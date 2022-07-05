@@ -23,7 +23,7 @@ class SimpleServiceApplicationTests {
     void contextLoads() {
         ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://localhost:" + port + "/hello", String.class);
         assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
-        assertEquals("Hello", responseEntity.getBody());
+        assertEquals("Hello, world!", responseEntity.getBody());
 
     }
 
