@@ -12,7 +12,7 @@ public class HelloController {
     @GetMapping
     public ResponseEntity<String> hello(){
         counter++;
-        return ResponseEntity.ok("Hello " + counter + " time(s)");
+        return ResponseEntity.ok("Hello " + counter + " times");
 
     }
 
