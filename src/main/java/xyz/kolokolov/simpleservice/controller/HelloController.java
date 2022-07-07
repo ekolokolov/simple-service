@@ -8,10 +8,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/hello")
 public class HelloController {
-
-
+    int counter;
     @GetMapping
     public ResponseEntity<String> hello(){
-        return ResponseEntity.ok("Hello, world!");
+        counter++;
+        return ResponseEntity.ok("Hello " + counter + " time(s)");
+
     }
+
+
+
 }
